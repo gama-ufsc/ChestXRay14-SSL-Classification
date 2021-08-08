@@ -1,0 +1,152 @@
+% This file was created by tikzplotlib v0.9.8.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.75,0.75,0}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black},
+tick align=outside,
+tick pos=left,
+title={Resultados treinamento - Finetune},
+x grid style={white!69.0196078431373!black},
+xlabel={Steps},
+xmajorgrids,
+xmin=-1.2, xmax=25.2,
+xtick style={color=black},
+y grid style={white!69.0196078431373!black},
+ylabel={AUROC},
+ymajorgrids,
+ymin=0.6, ymax=1,
+ytick style={color=black},
+ytick={0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1},
+yticklabels={0.60,0.65,0.70,0.75,0.80,0.85,0.90,0.95,1.00}
+]
+\addplot [semithick, red, mark=*, mark size=3, mark options={solid}]
+table {%
+0 0.887588560581207
+1 0.895802915096283
+2 0.896930754184723
+3 0.897675573825836
+4 0.896382451057434
+5 0.893229842185974
+6 0.892912685871124
+7 0.895464479923248
+8 0.891801357269287
+9 0.885237276554108
+10 0.891183018684387
+11 0.890624940395355
+12 0.882071554660797
+13 0.886476099491119
+14 0.87740695476532
+};
+\addlegendentry{Finetune 20%  (max=0.9)}
+\addplot [semithick, red, mark=x, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+3 0.897675573825836
+};
+\addplot [semithick, blue, mark=*, mark size=3, mark options={solid}]
+table {%
+0 0.861083090305328
+1 0.864263892173767
+2 0.87171196937561
+3 0.874206066131592
+4 0.865146040916443
+5 0.860990226268768
+6 0.862721741199493
+7 0.861864268779755
+8 0.855752825737
+9 0.844880640506744
+10 0.853194057941437
+11 0.841799557209015
+12 0.850364148616791
+13 0.846629917621613
+14 0.847159504890442
+};
+\addlegendentry{Finetune 10%  (max=0.87)}
+\addplot [semithick, blue, mark=x, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+3 0.874206066131592
+};
+\addplot [semithick, black, mark=*, mark size=3, mark options={solid}]
+table {%
+0 0.85490870475769
+1 0.866986572742462
+2 0.858360767364502
+3 0.868714511394501
+4 0.855890870094299
+5 0.841339528560638
+6 0.854426920413971
+7 0.858789384365082
+8 0.858863055706024
+9 0.845642924308777
+10 0.857207477092743
+11 0.860727727413177
+12 0.848595261573792
+13 0.843151450157166
+14 0.834013521671295
+};
+\addlegendentry{Finetune 5%  (max=0.87)}
+\addplot [semithick, black, mark=x, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+3 0.868714511394501
+};
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+0 0.827644109725952
+1 0.837812304496765
+2 0.840592920780182
+3 0.838403463363647
+4 0.839423716068268
+5 0.837666273117065
+6 0.829236507415771
+7 0.835149526596069
+8 0.828738689422607
+9 0.820746243000031
+10 0.828069627285004
+11 0.828116059303284
+12 0.826611638069153
+13 0.821338593959808
+14 0.814003109931946
+};
+\addlegendentry{Finetune 2%  (max=0.84)}
+\addplot [semithick, color0, mark=x, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+2 0.840592920780182
+};
+\addplot [very thick, black, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+0 0.875675559043884
+1 0.881186783313751
+2 0.891538143157959
+3 0.89438784122467
+4 0.897213280200958
+5 0.897674024105072
+6 0.901221513748169
+7 0.899573564529419
+8 0.90188080072403
+9 0.9036003947258
+10 0.903814852237701
+11 0.904244661331177
+12 0.904296159744263
+13 0.904204785823822
+14 0.90413910150528
+15 0.903973817825317
+16 0.905859112739563
+17 0.906385064125061
+18 0.905687153339386
+19 0.905036985874176
+20 0.903683006763458
+21 0.90323793888092
+22 0.903768241405487
+23 0.898201525211334
+24 0.897983312606812
+};
+\addlegendentry{Baseline (treinamento completo, max=0.906)}
+\addplot [semithick, color0, mark=x, mark size=3, mark options={solid}, only marks, forget plot]
+table {%
+17 0.906385064125061
+};
+\end{axis}
+
+\end{tikzpicture}
