@@ -46,15 +46,6 @@ def train(CHOSEN_CLASS,
     optimizer = optim.Adam(model.parameters(), lr=LR, betas=(0.9, 0.999), eps=1e-08, weight_decay=1e-5)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=LR_STEP)
     for epoch in range(EPOCHS):
-
-        # # skip first 15 epochs
-        # if epoch <= 15:
-        #     print(f'SKIPPING EPOCH {epoch}')
-        #     for i in range(train_loader.__len__()):
-        #         optimizer.step()
-        #     scheduler.step()
-        #     continue
-
         running_loss = 0.0
         start_time = time.time()
         model.train()
